@@ -1,0 +1,3 @@
+[submodule "practice_api_server"]
+	path = practice_api_server
+	url = https://github.com/BorodaUA/practice_api_server.git

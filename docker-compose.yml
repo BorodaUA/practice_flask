@@ -1,0 +1,22 @@
+version: "3"
+services:
+  postgres_server:
+    image: postgres:13
+    restart: always
+    env_file:
+      - ./postgres_server/.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  practice_api_server:
+    build: ./practice_api_server
+    restart: always
+    ports:
+      - "4800:4800"
+    volumes:
+      - ./practice_api_server:/usr/src/app
+    depends_on:
+      - postgres_server
+volumes:
+  pgdata:
