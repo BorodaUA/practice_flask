@@ -36,3 +36,13 @@ make up
 ```
 make stop
 ```
+## How to create coverage report
+### Make file coverage commands
+1. Run command to run coverage and create .coverage file
+```
+make coverage
+```
+2. Run command to crete coverage html report
+```
+make coverage_html_report
+```

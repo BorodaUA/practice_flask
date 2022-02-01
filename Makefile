@@ -1,7 +1,6 @@
 env_setup:
 	cp ./postgres_server/.env.example ./postgres_server/.env
-	cp ./redis_server/.env.example ./redis_server/.env
-	cp ./carpooling_api_server/.env.example ./carpooling_api_server/.env
+	cp ./practice_api_server/.env.example ./practice_api_server/.env
 build:
 	@docker-compose -f ${PWD}/docker-compose.yml build
 up:
@@ -16,3 +15,7 @@ remove_all_images:
 	@docker rmi -f $$(docker images -a -q)
 remove_all_volumes:
 	@docker volume rm $$(docker volume ls -q)
+coverage:
+	@docker compose run practice_api_server coverage run -m unittest discover
+coverage_html_report:
+	@docker compose run practice_api_server coverage html   
