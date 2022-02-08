@@ -1,6 +1,21 @@
 # Practice flask project
 A pet project to get familiar with flask.
 ## How to setup and run
+### tl;dr version:
+1. Clone the repository
+```
+git clone https://github.com/BorodaUA/practice_flask.git --recurse-submodules
+```
+2. Use make command to setup .env files
+```
+make env_setup
+```
+3. Use make command to build and run project
+```
+make up
+```
+4. ??? Profit
+### Detailed version:
 ### How to get project with submodules:
 ```
 git clone https://github.com/BorodaUA/practice_flask.git --recurse-submodules
